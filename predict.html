@@ -1,0 +1,25 @@
+<link rel= "stylesheet" type= "text/css" href= "sources/css/predict.css">
+<script src="sources/js/predict/prediction.js"></script>
+
+
+<div class="login" id="login">
+	<h1>GLADIGATOR</h1>
+    <h3>Generate Prediction</h3>
+    <form method="post">
+    	<input type="text" name="u" id="geneID" placeholder="Gene ID" required="required" />
+        <input type="text" name="p" id="diseaseCUI" placeholder="Disease CUI" required="required" />
+        <select  id="pretrainedModel" onchange="selectChanged()">
+            <option value=1>Pre-trained Model 1</option>
+            <option value=2>Pre-trained Model 2</option>
+            <option value=3>Pre-trained Model 3</option>
+            <option value=4>Pre-trained Model 4</option>
+            <option value=5>Pre-trained Model 5</option>
+            <option value=6>Pre-trained Model 6</option>
+          </select>
+        <p id="modelInformation">Source: DisGeNet API, GDA Score >= 0.9</p>
+        <button type="button" onclick="sendRequest()" class="btn btn-primary btn-block btn-large">Generate Prediction</button>
+        <p style="visibility:hidden;" id="predictionOutput"></p>
+    </form>
+</div>
+
+<div id="loading"></div>
