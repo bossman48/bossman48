@@ -26,8 +26,8 @@ function selectChanged() {
 
 function sendRequest() {
     
-    //requrestUrl = "http://212.174.63.62:4848/encrypt";
-    requrestUrl = "http://127.0.0.1:4848/encrypt";
+    requrestUrl = "http://212.174.63.62:4848/encrypt";
+    //requrestUrl = "http://127.0.0.1:4848/encrypt";
     document.getElementById("login").style.filter = "blur(2px)";
     document.getElementById("loading").style.visibility="visible";
     const data="";
@@ -60,8 +60,8 @@ function sendRequestAfterEncryption(ciphertext, tag, nonce) {
     geneID = document.getElementById("geneID").value;
     diseaseCUI = document.getElementById("diseaseCUI").value;
     
-    //url = "http://212.174.63.62:4848/"
-    url = "http://127.0.0.1:4848/"
+    url = "http://212.174.63.62:4848/"
+    //url = "http://127.0.0.1:4848/"
 
     console.log(geneID+" "+diseaseCUI+" "+pretrainedModel+" "+ url);
 
